@@ -5,6 +5,7 @@
 
 body {
     font-family:'Roboto','Noto Sans', serif;
+    overflow-x: hidden;
 
 }
 
@@ -19,17 +20,20 @@ a {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1110px;
     margin: 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    // outline: rgb(49, 12, 80) 1px solid;
+  
 
     @include pad {
         max-width: 992px;
+        padding: 0 15px;
+        
     }
 
     @include mobile {
         max-width: 767px;
+        padding: 0 15px;
     }
 }
 
@@ -42,5 +46,10 @@ a {
 
 .text-center {
     text-align: center;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
 }
 

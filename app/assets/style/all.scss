@@ -1,8 +1,14 @@
-@import "reset";
+// Configuration
 @import "variable";
 @import "mixin";
+
+// Global settings
+@import "reset";
 @import "base";
-@import "main";
+
+// Layout 
+@import "index";
+@import "faq";
 
 
 
