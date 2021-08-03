@@ -1,10 +1,32 @@
+
+
 .area-select{
      margin-bottom: 32px;
+     .form-select {
+          width:30%;
+     }
+     @include mobile {
+          justify-content: space-between;
+          align-items: center;
+
+        .form-select{
+             width: 70%;
+        }
+ 
+      }
+
+
+   
      
 
 }
 .area-select-title {
      margin-right: 22px;
+     @include mobile {
+         font-size: 14px;
+     
+
+     }
 
     }
 
@@ -30,6 +52,13 @@
           border: none;
          
      }
+
+     @include mobile {
+          flex-direction: column;
+
+     }
+
+   
      width: 40%;
      border: 1px solid #00000020;
      .area-card-img {
@@ -39,9 +68,12 @@
           @include pad {
                width: 50%;
                margin-right: 32px;
-              
-               
+                 
            }
+           @include mobile {
+               width: 100%;
+     
+          }
      }
 
      .area-cardbody {
@@ -59,6 +91,8 @@
 
                }
           }
+
+          flex: 1 1 auto;
      
           
           @include pad {
@@ -86,6 +120,10 @@
                } 
               
            }
+          @include mobile {
+               width: 100%;
+     
+          }
      }
 }
 

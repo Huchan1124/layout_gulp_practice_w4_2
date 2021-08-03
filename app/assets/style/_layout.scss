@@ -1,6 +1,10 @@
 
 header{
     padding: 0 88px;
+    a {
+        display: block;
+       
+    }
     .nav {
 
         display: flex;
@@ -9,14 +13,20 @@ header{
         align-items: center;
         padding: 30px 0 29.43px 0;
         .logo {
-            width: 80px;
-            height: 48.57px;
-            background: url("../images/logo/logo.png") no-repeat;
-            p {
-                text-indent: 101%;
-                white-space: nowrap;
-                overflow: hidden;
+
+            a{
+                width: 80px;
+                height: 48.57px;
+                background: url("../images/logo/logo.png") no-repeat;
+                h1 {
+                    text-indent: 101%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
             }
+          
+            
         }
         .nav-items {
             display: flex;
@@ -30,9 +40,7 @@ header{
                 margin-right: 0;
             }
 
-            a {
-                display: block;
-            }
+        
       
         }
     }
@@ -70,11 +78,16 @@ header{
           flex-direction: column;
           padding: 0 0;
           .logo {
-              width: 48px;
-              height: 29.14px;
-              background-size: contain;
-              margin-top: 10px;
-              margin-bottom: 10.86px;
+              a {
+                width: 48px;
+                height: 29.14px;
+                background-size: contain;
+                margin-top: 10px;
+                margin-bottom: 10.86px;
+                padding: 0;
+
+              }
+              
           }
         }
        .nav .nav-items {
