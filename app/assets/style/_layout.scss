@@ -1,0 +1,267 @@
+
+header{
+    padding: 0 88px;
+    .nav {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0 29.43px 0;
+        .logo {
+            width: 80px;
+            height: 48.57px;
+            background: url("../images/logo/logo.png") no-repeat;
+            p {
+                text-indent: 101%;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        .nav-items {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                margin-right: 64px;
+               
+
+            }
+            li:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                display: block;
+            }
+      
+        }
+    }
+
+    @include pad {
+        padding: 0;
+        .nav  {     
+         padding-left: 39px;
+         padding-right: 39px;
+     
+        }
+       .banner-bg {
+         h2 {
+             left:297.5px;
+             right:38.5px;
+             bottom: 373px;
+             font-size: 48px;
+             span {
+                 font-size: 20px;
+             }
+         }
+        }
+     
+     
+
+}
+
+
+@include mobile {
+    // a 標籤可以設定為 diplay: block;，當變為手機版時可以自適應撐滿父層 li 寬度。並在 a 標籤使用 padding 推出高度，增加點擊範圍
+        a {
+            padding: 8px 50px;
+        }
+        .nav {
+          flex-direction: column;
+          padding: 0 0;
+          .logo {
+              width: 48px;
+              height: 29.14px;
+              background-size: contain;
+              margin-top: 10px;
+              margin-bottom: 10.86px;
+          }
+        }
+       .nav .nav-items {
+          width: 100%;
+          text-align: center;
+    
+          }
+    
+        .nav .nav-items li {
+            width: 50%;
+            margin-right: 0 ;
+            border: 1px solid $secondary-color;
+            font-size: 20px;
+           
+            }
+    
+        .banner-bg  {
+            background: url("../images/banner/banner-sm.png") no-repeat;
+            background-size: cover;
+            height: 394px;
+            h2 {
+                left: 72px;
+                right: 15px;
+                bottom: 163px;
+                font-size: 32px;
+            span {
+                font-size: 16px;
+    
+            }
+    
+            }
+         
+        }
+        
+          
+
+}
+
+    
+
+}
+
+
+.footer {
+    color: $secondary-color;
+    .container {
+        @include mobile {
+            position: relative;
+         }
+    }
+
+    .footer-top {
+        justify-content: space-between;
+      
+    }
+    
+    .footer-nav {
+     
+        padding: 44px 0;
+        flex-wrap: nowrap;
+      
+        li {
+         
+            margin-right:48px;
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+
+        @include pad {
+            li {
+                margin-right:40px;
+            }
+        }
+
+        @include mobile {
+            li {
+                display: none;
+              
+            }
+        }
+    }
+    // .footer .footer-sns-link 不需設定寬度，可以將 .footer-nav 與 .footer-sns-link 使用一個 div 包覆並設定 justify-content: space-between; 使其可以左右貼齊
+
+    .footer-sns-link {
+      
+        padding-top: 32px;
+       li {
+        margin-right:32px;
+
+
+       }
+
+       li:last-child {
+           margin-right: 0;
+       }
+
+
+        @include pad {
+
+            li {
+                width: 24px;
+               
+             margin-right:40px;
+            }
+        }
+    }
+
+
+   // .footer .footer-contact 也不需要設定寬度哦
+    .footer-contact {
+     
+        padding-bottom: 24px;
+        li:nth-child(1)  {
+            margin-bottom: 16px;
+            img {
+                margin-right: 22px;
+            }
+        }
+        li:nth-child(2)  img {
+          margin-right: 20px;
+          
+        }
+
+        @include pad {
+            padding-bottom: 20px;
+            font-size: 20px;
+            li:nth-child(1)  {
+                margin-bottom: 12px;
+                img {
+                    margin-right: 11px;
+                    width: 18px;
+
+                }
+            }
+            li:nth-child(2)  img {
+              margin-right: 10px;
+              width: 20px;
+              
+            }
+
+
+        }
+
+        @include mobile {
+            position: absolute;
+            top: 0;
+    
+            padding-top:24px ;
+            padding-bottom: 25px;
+            font-size: 16px;
+           
+           }
+
+
+    }
+
+   // .footer-copyright 建議可以使用 div，copyright 不算列表建議可以移出 ul 使用 p 標籤
+   //「隱私權政策、服務條款」為可以點選的連結，可以使用 a 標籤包覆
+    .footer-copyright {
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid $secondary-color;
+        padding-top: 32px;
+        padding-bottom:40px;
+        li:nth-child(1)  {
+            margin-right:48px;
+            
+          }
+
+          @include mobile {
+            font-size: 14px;
+            padding-top: 16px;
+            padding-bottom: 24px;
+            
+            li, p {
+               width: 100%;
+               flex-direction: column;
+               margin-bottom: 8px;
+               a {
+                   margin-bottom: 8px;
+               }
+            
+            }
+
+           
+           }
+    }
+}
