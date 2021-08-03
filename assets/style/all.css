@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+.fw-bold {
+  font-weight: bold; }
+
+.text-center {
+  text-align: center; }
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
 .fz-14 {
   font-size: 14px; }
 
@@ -44,19 +57,6 @@
 
 .material-icons-outlined.md-44 {
   font-size: 44px; }
-
-.fw-bold {
-  font-weight: bold; }
-
-.text-center {
-  text-align: center; }
-
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
 
 .container {
   max-width: 1140px;
@@ -133,9 +133,13 @@ img {
 a {
   text-decoration: none;
   color: #FBF2F2; }
+  a:hover {
+    color: #f15a5a; }
 
 header {
   padding: 0 88px; }
+  header a {
+    display: block; }
   header .nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -149,11 +153,11 @@ header {
         -ms-flex-align: center;
             align-items: center;
     padding: 30px 0 29.43px 0; }
-    header .nav .logo {
+    header .nav .logo a {
       width: 80px;
       height: 48.57px;
       background: url("../images/logo/logo.png") no-repeat; }
-      header .nav .logo p {
+      header .nav .logo a h1 {
         text-indent: 101%;
         white-space: nowrap;
         overflow: hidden; }
@@ -167,8 +171,6 @@ header {
         margin-right: 64px; }
       header .nav .nav-items li:last-child {
         margin-right: 0; }
-      header .nav .nav-items a {
-        display: block; }
   @media (max-width: 992px) {
     header {
       padding: 0; }
@@ -191,12 +193,13 @@ header {
           -ms-flex-direction: column;
               flex-direction: column;
       padding: 0 0; }
-      header .nav .logo {
+      header .nav .logo a {
         width: 48px;
         height: 29.14px;
         background-size: contain;
         margin-top: 10px;
-        margin-bottom: 10.86px; }
+        margin-bottom: 10.86px;
+        padding: 0; }
     header .nav .nav-items {
       width: 100%;
       text-align: center; }
@@ -423,14 +426,36 @@ header {
       font-weight: normal;
       line-height: 1.5; }
   @media (max-width: 767px) {
+    .title h2 {
+      font-size: 28px;
+      border-left: 4px solid #9F1213; }
+    .title h3 {
+      font-size: 20px; }
+    .title .qa h4 {
+      font-size: 16px; }
     .title .qa p {
       margin-left: 0; } }
 
 .area-select {
   margin-bottom: 32px; }
+  .area-select .form-select {
+    width: 30%; }
+  @media (max-width: 767px) {
+    .area-select {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .area-select .form-select {
+        width: 70%; } }
 
 .area-select-title {
   margin-right: 22px; }
+  @media (max-width: 767px) {
+    .area-select-title {
+      font-size: 14px; } }
 
 .area-items {
   display: -webkit-box;
@@ -465,6 +490,12 @@ header {
       width: 100%;
       margin-bottom: 32px;
       border: none; } }
+  @media (max-width: 767px) {
+    .area-card {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .area-card .area-card-img {
     width: 100%;
     height: 53%;
@@ -474,29 +505,39 @@ header {
       .area-card .area-card-img {
         width: 50%;
         margin-right: 32px; } }
-  .area-card .area-cardbody h3 {
-    padding: 12px 24px;
-    line-height: 36px;
-    border-bottom: 1px solid #00000020; }
-  .area-card .area-cardbody ul {
-    padding: 16px 27px; }
-    .area-card .area-cardbody ul li {
-      margin-bottom: 14px; }
-  @media (max-width: 992px) {
-    .area-card .area-cardbody {
-      width: 50%;
-      border: 1px solid #00000020;
-      margin: 15px 0; }
-      .area-card .area-cardbody h3 {
-        padding: 8.5px 16px;
-        font-size: 16px;
-        line-height: 24px; }
-      .area-card .area-cardbody ul {
-        padding: 16px 24px; }
-        .area-card .area-cardbody ul li {
-          font-size: 14px;
-          line-height: 21px;
-          margin-bottom: 16px; } }
+    @media (max-width: 767px) {
+      .area-card .area-card-img {
+        width: 100%; } }
+  .area-card .area-cardbody {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
+    .area-card .area-cardbody h3 {
+      padding: 12px 24px;
+      line-height: 36px;
+      border-bottom: 1px solid #00000020; }
+    .area-card .area-cardbody ul {
+      padding: 16px 27px; }
+      .area-card .area-cardbody ul li {
+        margin-bottom: 14px; }
+    @media (max-width: 992px) {
+      .area-card .area-cardbody {
+        width: 50%;
+        border: 1px solid #00000020;
+        margin: 15px 0; }
+        .area-card .area-cardbody h3 {
+          padding: 8.5px 16px;
+          font-size: 16px;
+          line-height: 24px; }
+        .area-card .area-cardbody ul {
+          padding: 16px 24px; }
+          .area-card .area-cardbody ul li {
+            font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 16px; } }
+    @media (max-width: 767px) {
+      .area-card .area-cardbody {
+        width: 100%; } }
 
 .map {
   border-bottom: 1px solid #00000020;
