@@ -1,7 +1,7 @@
 
 
 
-.faq {
+.title {
     padding-top: 96px;
     padding-bottom: 160px;
     h2 {
@@ -10,7 +10,7 @@
         border-left: 8px solid $title-border-color;
     }
 
-    li {
+    .qa {
        
         margin-top: 36px;
         p {
@@ -23,7 +23,7 @@
     }
 
     @include mobile {
-        li p {
+        .qa p {
             margin-left: 0;
         }
     }

@@ -1,6 +1,8 @@
 // Configuration
 @import "variable";
 @import "mixin";
+@import "utilities";
+@import "grid";
 
 // Global settings
 @import "reset";
@@ -10,6 +12,7 @@
 @import "layout";
 @import "index";
 @import "faq";
+@import "location";
 
 
 
