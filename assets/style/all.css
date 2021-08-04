@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 .fw-bold {
   font-weight: bold; }
@@ -384,6 +384,8 @@ header {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
+    .classical-glasses .classical-glasses-items span {
+      margin-right: 8px; }
     .classical-glasses .classical-glasses-items li {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -393,8 +395,20 @@ header {
               align-items: center;
       width: 100%;
       margin-bottom: 32px; }
+      @media (max-width: 767px) {
+        .classical-glasses .classical-glasses-items li {
+          position: relative;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center; } }
       .classical-glasses .classical-glasses-items li img {
         width: 57%; }
+        @media (max-width: 767px) {
+          .classical-glasses .classical-glasses-items li img {
+            width: 100%; } }
       .classical-glasses .classical-glasses-items li h3 {
         width: 43%;
         display: -webkit-box;
@@ -403,12 +417,28 @@ header {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        padding-left: 32px; }
+        padding-left: 32px;
+        font-style: italic;
+        font-weight: 900; }
+        @media (max-width: 992px) {
+          .classical-glasses .classical-glasses-items li h3 {
+            font-size: 28px; } }
+        @media (max-width: 767px) {
+          .classical-glasses .classical-glasses-items li h3 {
+            position: absolute;
+            line-height: 72px;
+            padding-left: 0; } }
     .classical-glasses .classical-glasses-items li:nth-child(2) {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
           -ms-flex-direction: row-reverse;
               flex-direction: row-reverse; }
+      @media (max-width: 992px) {
+        .classical-glasses .classical-glasses-items li:nth-child(2) {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; } }
 
 .title {
   padding-top: 96px;
