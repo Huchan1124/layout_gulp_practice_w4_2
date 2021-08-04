@@ -342,6 +342,9 @@ header {
   padding-bottom: 80px; }
   .feature .feature-title {
     padding-bottom: 48.33px; }
+    @media (max-width: 767px) {
+      .feature .feature-title {
+        font-size: 24px; } }
   .feature .feature-items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -378,6 +381,10 @@ header {
   padding-bottom: 80px; }
   .classical-glasses h2 {
     margin-bottom: 40px; }
+    @media (max-width: 767px) {
+      .classical-glasses h2 {
+        font-size: 20px;
+        line-height: 48px; } }
   .classical-glasses .classical-glasses-items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -439,6 +446,48 @@ header {
           -webkit-box-direction: normal;
               -ms-flex-direction: row;
                   flex-direction: row; } }
+
+.design-glasses {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background: url("../images/bg.png") center; }
+  .design-glasses h2 {
+    margin-bottom: 40px; }
+    @media (max-width: 767px) {
+      .design-glasses h2 {
+        font-size: 20px;
+        line-height: 48px; } }
+  .design-glasses .design-glasses-items {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media (max-width: 767px) {
+      .design-glasses .design-glasses-items {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    .design-glasses .design-glasses-items li {
+      width: 48%;
+      position: relative; }
+      @media (max-width: 992px) {
+        .design-glasses .design-glasses-items li {
+          font-size: 32px; } }
+      @media (max-width: 767px) {
+        .design-glasses .design-glasses-items li {
+          width: 100%;
+          margin-bottom: 16px; } }
+    .design-glasses .design-glasses-items h3 a {
+      color: #AA0601;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+      .design-glasses .design-glasses-items h3 a:hover {
+        color: #f15a5a; }
 
 .title {
   padding-top: 96px;
