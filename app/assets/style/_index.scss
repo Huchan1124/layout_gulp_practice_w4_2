@@ -134,27 +134,67 @@
     .classical-glasses-items {
         display: flex;
         flex-wrap: wrap;
+        span {
+            margin-right: 8px;
+        }
        
         li {
             display: flex;
             align-items: center;
             width: 100%;
             margin-bottom: 32px;
+            @include mobile {
+                position: relative;
+                display: flex;
+                justify-content: center;
+            }
             img {
                 width: 57%;
+
+                @include mobile {
+                  width: 100%;
+                }
+    
             }
             h3 {
                 width: 43%;
                 display: flex;
                 align-items: center;
                 padding-left: 32px;
+                font-style: italic;
+                font-weight: 900;
+
+
+                @include pad {
+                    
+                  font-size: 28px;
+                    
+                    
+                }
+
+                @include mobile {
+                    position: absolute;
+                    line-height: 72px;
+                    padding-left: 0;
+                  
+                }
             }
+
+          
+
+
 
         }
 
         li:nth-child(2) {
             flex-direction: row-reverse;
+
+            @include pad {
+                flex-direction: row;
+            }
         }
+
+       
         
         
     }
