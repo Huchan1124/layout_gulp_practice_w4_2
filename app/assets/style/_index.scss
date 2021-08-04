@@ -66,6 +66,11 @@
    
     .feature-title {
         padding-bottom: 48.33px;
+        
+        @include mobile {
+            font-size: 24px;
+          
+        }
     }
     .feature-items {
         display: flex;
@@ -130,6 +135,11 @@
     padding-bottom:80px;
     h2 {
         margin-bottom: 40px;
+        @include mobile {
+            font-size: 20px;
+            line-height: 48px;
+        
+        }
     }
     .classical-glasses-items {
         display: flex;
@@ -199,6 +209,75 @@
         
     }
   
+}
+
+
+
+.design-glasses {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background: url("../images/bg.png") center ;
+   
+    h2 {
+        margin-bottom: 40px;
+        @include mobile {
+            font-size: 20px;
+            line-height: 48px;
+        
+        }
+    }
+  
+
+    .design-glasses-items {
+        justify-content: space-between;
+      
+
+        @include mobile {
+            flex-direction: column;
+        
+        }
+
+        
+       
+        li {
+            width: 48%;
+            position: relative;
+            @include pad {
+                font-size:  32px;
+             }
+            @include mobile {
+                width: 100%;
+                margin-bottom: 16px;
+                
+           
+          
+            }
+       
+   
+           
+         
+        }
+
+        h3 a {
+            color: $primary-color;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &:hover {
+                    color: rgb(241, 90, 90);
+                
+            }
+
+         
+        }
+
+
+        
+       
+    }
 }
 
     
