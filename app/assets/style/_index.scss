@@ -280,6 +280,83 @@
     }
 }
 
+
+.recommend{
+    padding: 60px;
+    h2 {
+        margin-bottom: 40px;
+    }
+}
+
+.recommend-card {
+    width: 22%;
+    margin-right: 4%;
+  
+    border-radius: 4px 4px 0px 0px;
+    
+    
+
+    &:nth-child(4){
+        margin-right: 0;
+        
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px 4px 0px 0px;
+
+    }
+
+   
+    display: flex;
+    flex-direction: column;
+
+    @include pad {
+        width: 48%;
+        margin-bottom: 32px;
+
+        &:nth-child(2){
+            margin-right: 0;
+        }
+    
+        
+
+    }
+
+    @include mobile {
+        width: 100%;
+        margin-bottom: 32px;
+
+       
+        margin-right: 0;
+       
+    
+        
+
+    }
+
+
+    .recommend-card-body {
+        min-height: 204px;
+        border: #DEE2E6 1px solid;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        //平均分配剩餘空間
+        flex: 1 1 auto;
+        
+        
+    }
+
+    .recommend-card-body-content {
+        h4 {
+            margin-bottom: 8px;
+        }
+        margin-bottom: 76px;
+
+    }
+}
     
   
  
